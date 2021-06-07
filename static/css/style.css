@@ -1,0 +1,243 @@
+.mediaViewInfo {
+    --web-view-name: Web 1920 – 1;
+    --web-view-id: Web_1920__1;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+:root {
+    --web-view-ids: Web_1920__1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: "red"
+}
+#Web_1920__1 {
+    position: absolute;
+    width: 100%;
+    height: 1080px;
+    background: linear-gradient(140.6deg, rgba(73,234,117,1) 0%, rgba(255,248,74,1) 100%);
+    background-position: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    --web-view-name: Web 1920 – 1;
+    --web-view-id: Web_1920__1;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+    min-height: 100vh;
+}
+#Path_1 {
+    fill: rgba(49,182,230,0.435);
+}
+.Path_1 {
+    overflow: visible;
+    position: absolute;
+    width: 1418px;
+    height: 1456px;
+    left: -588px;
+    top: -180px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Group_1 {
+    position: absolute;
+    width: 370px;
+    height: 104px;
+    left: 60px;
+    top: 115px;
+    overflow: visible;
+}
+#Group_19 {
+    position: absolute;
+    width: 370px;
+    height: 104px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#Rectangle_1 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_1 {
+    position: absolute;
+    overflow: visible;
+    width: 370px;
+    height: 104px;
+    left: 0px;
+    top: 0px;
+}
+#smit_logo_small1_png-2 {
+    position: absolute;
+    width: 261px;
+    height: 60px;
+    left: 54px;
+    top: 22px;
+    overflow: visible;
+}
+#Group_18 {
+    position: absolute;
+    width: 93px;
+    height: 41px;
+    left: 852px;
+    top: 147px;
+    overflow: visible;
+}
+#Rectangle_2 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(0,0,0,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_2 {
+    position: absolute;
+    overflow: visible;
+    width: 93px;
+    height: 41px;
+    left: 0px;
+    top: 0px;
+}
+#Home {
+    left: 17px;
+    top: 8px;
+    position: absolute;
+    overflow: visible;
+    width: 60px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    color: rgba(0,0,0,1);
+}
+#Admin_Login {
+    left: 983px;
+    top: 159px;
+    position: absolute;
+    overflow: visible;
+    width: 82px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    border: 1px white
+}
+#Check_Attendance {
+    left: 1108px;
+    top: 159px;
+    position: absolute;
+    overflow: visible;
+    width: 121px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(0,0,0,1);
+}
+#Attendance_System {
+    left: 60px;
+    top: 399px;
+    position: absolute;
+    overflow: visible;
+    width: 559px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    color: rgba(0,0,0,1);
+}
+#Register_with_your_college_ema {
+    left: 60px;
+    top: 491px;
+    position: absolute;
+    overflow: visible;
+    width: 536px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(60,60,60,1);
+}
+#Rectangle_3 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(0,0,0,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_3 {
+    position: absolute;
+    overflow: visible;
+    width: 301px;
+    height: 64px;
+    left: 60px;
+    top: 670px;
+}
+#hero-img {
+    position: absolute;
+    width: 358px;
+    height: 352px;
+    left: 911px;
+    top: 364px;
+    overflow: visible;
+}
+#Group_17 {
+    position: absolute;
+    width: 229.285px;
+    height: 33px;
+    left: 96px;
+    top: 685px;
+    overflow: visible;
+}
+#Open_Camera {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: hidden;
+    width: 186px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgba(60,60,60,1);
+    cursor: pointer
+}
+#Icon_awesome-camera {
+    fill: rgba(0,0,0,1);
+}
+.Icon_awesome-camera {
+    overflow: visible;
+    position: absolute;
+    width: 27.327px;
+    height: 23.911px;
+    left: 201.959px;
+    top: 4.871px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#openCamera{
+    width:100%;
+    background: #fff;
+    overflow:none
+}
