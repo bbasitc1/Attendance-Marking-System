@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -24,6 +26,18 @@ def capture(request):
             encodeImg = face_recognition.face_encodings(img)[0]
             encodeList.append(encodeImg)
         return encodeList
+    def markAttendance(name):
+        with open('./mini/attendance.csv', 'r+') as f:
+            myDataList = f.readlines()
+            nameList = []
+            for line in myDataList:
+                entry = line.split(',')
+                nameList.append(entry[0])
+                if name not in nameList:
+                    now = datetime.now()
+                    dtString = now.strftime("%H:%M:%S")
+                    f.writelines(f'\n{name}, {dtString}')
+                    break
 
     encodeListsKnown = findEncodings(images)
     cap = cv2.VideoCapture(0)
@@ -45,10 +59,11 @@ def capture(request):
                 cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 # cv2.rectangle(img, (x1, y2 - 35), (x2, y2), (0, 255, 0), cv2.FILLED)
                 cv2.putText(img, "Attendance marked for "+name, (x1-200, y2 - 6), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 0), 2)
+                markAttendance(name)
             else:
                 cv2.putText(img, "No matches found " + name, (x1 - 200, y2 - 6), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 0), 2)
         cv2.imshow('Webcam', img)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(0) & 0xFF == ord('q'):
             break
     cap.release()
     cv2.destroyAllWindows()
