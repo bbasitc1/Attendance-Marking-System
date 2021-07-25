@@ -40,6 +40,7 @@ def capture(request):
                     break
 
     encodeListsKnown = findEncodings(images)
+    print(f' Total No of encodings :{len(encodeListsKnown[0])}')
     cap = cv2.VideoCapture(0)
     while True:
         success, img = cap.read()
@@ -47,6 +48,8 @@ def capture(request):
         imgS = cv2.cvtColor(imgS, cv2.COLOR_RGB2BGR)
         facesCurFrame = face_recognition.face_locations(imgS)
         encodeCurFrame = face_recognition.face_encodings(imgS, facesCurFrame)
+        if len(facesCurFrame) == 0:
+            cv2.putText(img, "No Face found ", (100, 100), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 0), 2)
         for encodeFace, faceLoc in zip(encodeCurFrame, facesCurFrame):
             matches = face_recognition.compare_faces(encodeListsKnown, encodeFace)
             faceDis = face_recognition.face_distance(encodeListsKnown, encodeFace)
@@ -61,9 +64,9 @@ def capture(request):
                 cv2.putText(img, "Attendance marked for "+name, (x1-200, y2 - 6), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 0), 2)
                 markAttendance(name)
             else:
-                cv2.putText(img, "No matches found " + name, (x1 - 200, y2 - 6), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 0), 2)
+                cv2.putText(img, "No matches found ", (x1 - 200, y2 - 6), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 0), 2)
         cv2.imshow('Webcam', img)
-        if cv2.waitKey(0) & 0xFF == ord('q'):
+        if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     cap.release()
     cv2.destroyAllWindows()
